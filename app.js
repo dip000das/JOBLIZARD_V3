@@ -8,18 +8,17 @@ import { errorMiddleware } from "./middlewares/error.js";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
 // require('dotenv').config()
-// import dotenv from 'dotenv';
-// dotenv.config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 // config({ path: "./config/config.env" });
 
 
 const app = express();
-const FRONTEND_URL=`http://localhost:5173`;
 app.use(
   cors({
-    origin: [FRONTEND_URL],
+    origin: [process.env.BASE_URL],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
