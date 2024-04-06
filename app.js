@@ -16,10 +16,10 @@ dotenv.config();
 
 
 const app = express();
- const BASE_URL=process.env.BASE_URL;
+ const FRONTEND_URL=process.env.FRONTEND_URL;
 app.use(
   cors({
-    origin: [BASE_URL],
+    origin: [FRONTEND_URL],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
