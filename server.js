@@ -1,9 +1,7 @@
 import app from "./app.js";
-var cors = require('cors')
 import cloudinary from "cloudinary";
 // require('dotenv').config()
 import dotenv from 'dotenv';
-app.use(cors())
 dotenv.config();
 const PORT= process.env.PORT||4000
 cloudinary.v2.config({
